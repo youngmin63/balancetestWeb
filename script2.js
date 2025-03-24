@@ -51,7 +51,7 @@ stopBtn.onclick = () => {
     return;
   }
 
-  fetch("https://youngmin63.github.io/balancetestWeb//api/test", {
+  fetch("https://youngmin63.github.io/balancetestWeb:8080/api/test", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
