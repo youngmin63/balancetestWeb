@@ -39,7 +39,7 @@ stopBtn.onclick = () => {
     return;
   }
 
-  fetch("https://balancetest-backend.onrender.com", {
+  fetch("postgresql://dpg-cvh3apdrie7s73ejlhrg-a.singapore-postgres.render.com/balance_test_db", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
