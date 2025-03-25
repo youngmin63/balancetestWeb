@@ -39,7 +39,7 @@ stopBtn.onclick = () => {
     return;
   }
 
-  fetch("https://your-backend-url.onrender.com/api/submit", {
+  fetch("https://https://balancetest-backend.onrender.com/api/submit", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
