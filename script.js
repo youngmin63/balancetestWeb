@@ -6,22 +6,30 @@ const timerDisplay = document.getElementById("timer");
 const resultMsg = document.getElementById("resultMsg");
 
 startBtn.onclick = () => {
-  resultMsg.textContent = "3초 뒤 타이머가 시작됩니다...";
+  let countdown = 3;
+  resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...`;
   timerDisplay.textContent = "00.00초";
   startBtn.disabled = true;
   stopBtn.disabled = true;
 
-  setTimeout(() => {
-    resultMsg.textContent = "측정 중... 균형을 유지하세요!";
-    startTime = Date.now();
-    stopBtn.disabled = false;
+  const countdownInterval = setInterval(() => {
+    countdown--;
+    if (countdown > 0) {
+      resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...`;
+    } else {
+      clearInterval(countdownInterval);
+      resultMsg.textContent = "측정 중... 균형을 유지하세요!";
+      startTime = Date.now();
+      stopBtn.disabled = false;
 
-    interval = setInterval(() => {
-      const duration = ((Date.now() - startTime) / 1000).toFixed(2);
-      timerDisplay.textContent = `${duration}초`;
-    }, 10);
-  }, 3000);
+      interval = setInterval(() => {
+        const duration = ((Date.now() - startTime) / 1000).toFixed(2);
+        timerDisplay.textContent = `${duration}초`;
+      }, 10);
+    }
+  }, 1000);
 };
+
 
 stopBtn.onclick = () => {
   clearInterval(interval);
