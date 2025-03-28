@@ -7,7 +7,7 @@ const resultMsg = document.getElementById("resultMsg");
 
 startBtn.onclick = () => {
   let countdown = 3;
-  resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...(Countdown starts in ${countdown})second `;
+  resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...(Countdown starts in ${countdown}sec) `;
   timerDisplay.textContent = "00.00초";
   startBtn.disabled = true;
   stopBtn.disabled = true;
