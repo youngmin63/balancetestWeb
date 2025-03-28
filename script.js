@@ -15,7 +15,7 @@ startBtn.onclick = () => {
   const countdownInterval = setInterval(() => {
     countdown--;
     if (countdown > 0) {
-      resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...(Countdown starts in ${countdown})second `;
+      resultMsg.textContent = `⏳ ${countdown}초 뒤 타이머가 시작됩니다...(Countdown starts in ${countdown} sec) `;
     } else {
       clearInterval(countdownInterval);
       resultMsg.textContent =
