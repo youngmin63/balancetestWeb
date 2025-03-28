@@ -9,10 +9,10 @@
     <h2>나의 균형감각은 평균 이상일까요?</h2>
     <div class="container">
       <!-- 사용자 입력 -->
-      <label>이름: <input type="text" id="name" /></label><br />
-      <label>나이: <input type="number" id="age" /></label><br />
+      <label>닉네임(Nickname): <input type="text" id="name" /></label><br />
+      <label>나이(Age): <input type="number" id="age" /></label><br />
       <label
-        >성별:
+        >성별(gender):
         <select id="gender">
           <option value="남성">남성</option>
           <option value="여성">여성</option>
@@ -22,11 +22,15 @@
       <!-- 안내 사진 -->
       <div>
         <p style="line-height: 2">
-          1. 한쪽 발을 들고 균형을 잡아주세요 <br />
+          1. 한쪽 발을 들고 균형을 잡아주세요<br />
+          (Lift one side your foot)<br /><br />
 
-          2. '측정시작'을 누르고 눈을 감아주세요! <br />
+          2. <b>'측정시작'</b> 을 누르고 눈을 감아주세요!<br />
+          (Press 'Start' and close your eyes) <br /><br />
 
-          3. 중심을 잃고 발이 땅에 닿으면 스탑! <br />
+          3. 중심을 잃고 발이 땅에 닿으면 <b>'스탑'</b> 을 눌러주세요!<br />
+          (Once you lose your balance and the foot you lifted touch the ground,
+          press 'Stop' ) <br /><br />
         </p>
         <picture>
           <source srcset="한발서기 사진.jpg" type="image/jpg" />
@@ -36,9 +40,9 @@
 
       <!-- 타이머 컨트롤 -->
       <br />
-      <button id="startBtn">측정 시작</button>
-      <button id="stopBtn" disabled>스탑</button>
-      <p id="timer">00.00초</p>
+      <button id="startBtn">측정 시작(Start)</button>
+      <button id="stopBtn" disabled>스탑(Stop)</button>
+      <p id="timer">00.00초(sec)</p>
 
       <!-- 결과 메시지 -->
       <p id="resultMsg"></p>
