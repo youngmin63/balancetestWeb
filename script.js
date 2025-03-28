@@ -30,7 +30,6 @@ startBtn.onclick = () => {
   }, 1000);
 };
 
-
 stopBtn.onclick = () => {
   clearInterval(interval);
   const duration = ((Date.now() - startTime) / 1000).toFixed(2);
@@ -45,7 +44,11 @@ stopBtn.onclick = () => {
     resultMsg.textContent = "이름, 나이, 성별을 모두 입력해주세요.";
     startBtn.disabled = false;
     return;
+  } else {
+    alert("참여해주셔서 감사합니다!");
   }
+
+  esultMsg.textContent = "📡 서버에 전송 중입니다...";
 
   fetch("https://balancetest-backend.onrender.com/api/submit", {
     method: "POST",
@@ -60,10 +63,12 @@ stopBtn.onclick = () => {
     .then((res) => res.text())
     .then((data) => {
       resultMsg.textContent = "✅ 참여해주셔서 감사합니다!";
+
       startBtn.disabled = false;
     })
     .catch((err) => {
       resultMsg.textContent = "❌ 서버 오류가 발생했습니다.";
+
       startBtn.disabled = false;
     });
 };
