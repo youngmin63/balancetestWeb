@@ -66,8 +66,9 @@ button:hover {
 }
 
 picture {
-  width: 100%;
+  width: 50%;
+  height: 1%;
   border-radius: 8px;
-  margin-top: 10px;
-  margin-bottom: 5v;
+  margin-top: 1px;
+  margin-bottom: 10px;
 }
