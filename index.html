@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>한발 균형잡기 테스트</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h2>한발 균형잡기 테스트</h2>
-  <div class=" container">
+  <head>
+    <meta charset="UTF-8" />
+    <title>한발 균형잡기 테스트</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>나의 균형감각은 평균 이상일까요?</h2>
+    <div class="container">
+      <!-- 사용자 입력 -->
+      <label>이름: <input type="text" id="name" /></label><br />
+      <label>나이: <input type="number" id="age" /></label><br />
+      <label
+        >성별:
+        <select id="gender">
+          <option value="남성">남성</option>
+          <option value="여성">여성</option>
+        </select> </label
+      ><br /><br />
 
-  <!-- 사용자 입력 -->
-  <label>이름: <input type="text" id="name" /></label><br/>
-  <label>나이: <input type="number" id="age" /></label><br/>
-  <label>성별: 
-    <select id="gender">
-      <option value="남성">남성</option>
-      <option value="여성">여성</option>
-    </select>
-  </label><br/><br/>
+      <!-- 안내 영상 -->
+      <div>
+        <p>아래 영상을 보고 자세를 따라하세요</p>
+        <video width="300" controls>
+          <source src="example.mp4" type="video/mp4" />
+          영상이 지원되지 않습니다.
+        </video>
+      </div>
 
-  <!-- 안내 영상 -->
-  <div>
-    <p>아래 영상을 보고 자세를 따라하세요</p>
-    <video width="300" controls>
-      <source src="example.mp4" type="video/mp4">
-      영상이 지원되지 않습니다.
-    </video>
-  </div>
+      <!-- 타이머 컨트롤 -->
+      <br />
+      <button id="startBtn">측정 시작</button>
+      <button id="stopBtn" disabled>스탑</button>
+      <p id="timer">00.00초</p>
 
-  <!-- 타이머 컨트롤 -->
-  <br/>
-  <button id="startBtn">측정 시작</button>
-  <button id="stopBtn" disabled>스탑</button>
-  <p id="timer">00.00초</p>
+      <!-- 결과 메시지 -->
+      <p id="resultMsg"></p>
 
-  <!-- 결과 메시지 -->
-  <p id="resultMsg"></p>
-
-  <script src="script.js"></script>
-</div>
-</body>
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>
