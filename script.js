@@ -48,7 +48,7 @@ stopBtn.onclick = () => {
     alert("참여해주셔서 감사합니다!");
   }
 
-  esultMsg.textContent = "📡 서버에 전송 중입니다...";
+  resultMsg.textContent = "📡 서버에 전송 중입니다...";
 
   fetch("https://balancetest-backend.onrender.com/api/submit", {
     method: "POST",
