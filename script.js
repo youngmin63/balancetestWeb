@@ -47,7 +47,7 @@ stopBtn.onclick = () => {
     startBtn.disabled = false;
     return;
   } else {
-    alert("참여해주셔서 감사합니다! Thank you for participating!");
+    alert("참여해주셔서 감사합니다! Thank you for your participation!");
   }
 
   resultMsg.textContent = "📡 서버에 전송 중입니다... Connecting to the server";
@@ -65,7 +65,7 @@ stopBtn.onclick = () => {
     .then((res) => res.text())
     .then((data) => {
       resultMsg.textContent =
-        "✅ 참여해주셔서 감사합니다! Thank you for participating";
+        "✅ 참여해주셔서 감사합니다! Thank you for your participation";
 
       startBtn.disabled = false;
     })
